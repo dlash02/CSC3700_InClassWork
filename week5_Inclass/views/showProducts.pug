@@ -1,0 +1,11 @@
+include layouts/layout1
+
+h2 #{title}
+
+if products.length == 0
+    h2 Sorry no current products
+else
+    h2 Current Products
+    ol
+        each p in products
+            li= p.title

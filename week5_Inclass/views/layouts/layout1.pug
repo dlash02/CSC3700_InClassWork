@@ -8,6 +8,13 @@ head
 header.main-header
     nav.main-nav-list
         li.nav-item
-            a.active(href='/shop') Shop
+            if from == 'showProducts'
+                a.active(href='/showProducts') Shop
+            else
+                a(href='/showProducts') Shop
         li.nav-item
-            a(href='/add-product') Add Product!
+            if from == 'addProduct'
+                a.active(href='/add-product') Add Product
+            else
+                a(href='/add-product') Add Product
+h2 #{from}

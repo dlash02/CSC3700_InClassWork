@@ -1,8 +1,9 @@
 const adminData = require("../routes/admin");
+// const Product = require("../models/oproduct");
 const Product = require("../models/product");
 // let products = [];
 exports.getAddProduct = ( req, res, next) => {
-    res.render( 'addProduct',
+    res.render( 'admin/addProduct',
         {
             from: 'addProduct'
         })
@@ -21,10 +22,17 @@ exports.postAddProduct = ( req, res, next) => {
     res.redirect('/add-product')
 }
 exports.getProducts = ( req, res, next ) => {
-    const products = Product.fetchAll();
-    res.render( 'showProducts', {
-        title: "Show Available Products",
-        from: 'showProducts',
-        products : products
+    // const products = Product.fetchAll();
+    // res.render( 'showProducts', {
+    //     title: "Show Available Products",
+    //     from: 'showProducts',
+    //     products : products
+    // });
+     Product.fetchAll( products => {
+        res.render( 'admin/showProductsAdmin', {
+            title: "Show Available Products",
+            from: 'showProducts',
+            products : products
+        });
     });
 }

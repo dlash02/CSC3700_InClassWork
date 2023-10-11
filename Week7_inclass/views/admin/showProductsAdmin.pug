@@ -14,8 +14,16 @@ include ../layouts/layoutBS
                     th(scope='col') Author
                     th(scope='col') Price
             tbody
+                - let ct = 0
                 each p in products
                     tr
                        td= p.title
                        td= p.author
                        td= p.price
+                       td
+                           form( method='get' action='editItem/' + ct )
+                               button( type='submit' class='btn btn-primary') Edit
+                       td
+                           form( method='get' action='deleteItem/' + ct )
+                               button( type='submit' class='btn btn-primary') Delete
+                    - ++ct

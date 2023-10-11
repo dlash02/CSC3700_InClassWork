@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const path = require('path');
-const productsController = require("../controllers/products")
+const adminController = require("../controllers/adminController")
+const productsController = require("../controllers/oproducts");
 // let products = [];
 // router.get(  '/add-product', (req, res, next) => {
 //     res.render( 'addProduct',
@@ -9,8 +10,12 @@ const productsController = require("../controllers/products")
 //             from: 'addProduct'
 //         })
 // });
-router.get( '/add-product', productsController.getAddProduct );
-router.post( '/product', productsController.postAddProduct);
+router.get( '/add-product', adminController.getAddProduct );
+router.post( '/product', adminController.postAddProduct);
+router.get( '/showAdmin', adminController.getProducts);
+router.get( '/deleteItem/:id', adminController.deleteProduct);
+// router.get( '/editItem/:id', adminController.editProduct);
+
 // router.post(  '/product', (req, res, next) => {
 //     // console.log( req );
 //     console.log("----flag")

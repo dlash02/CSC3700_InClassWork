@@ -16,10 +16,21 @@ nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.static-top
                         a.nav-link.active(aria-current='page' href='/showProducts') Show
                     li.nav-item
                         a.nav-link(href='/add-product') Add-Product
-                else
+                    li.nav-item
+                        a.nav-link(href='/showAdmin') Show Admin
+                else if from == 'addProduct'
                     li.nav-item
                         a.nav-link(aria-current='page' href='/showProducts') Show
                     li.nav-item
                         a.nav-link.active(href='/add-product') Add-Product
+                    li.nav-item
+                        a.nav-link(href='/showAdmin') Show Admin
+                else
+                    li.nav-item
+                        a.nav-link(aria-current='page' href='/showProducts') Show
+                    li.nav-item
+                        a.nav-link(href='/add-product') Add-Product
+                    li.nav-item
+                        a.nav-link.active(href='/showAdmin') Show Admin
 
 // Page Content

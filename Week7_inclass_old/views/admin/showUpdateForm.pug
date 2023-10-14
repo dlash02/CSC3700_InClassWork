@@ -1,0 +1,26 @@
+include ../layouts/layoutBS
+.container
+    h1.mt-4
+    h1.mt-4 #{title}
+    p Update Product
+
+    if product  ==  null
+        h2 Sorry no current products
+h1.mt-3
+div.mt-3
+    h1 Update Book Records
+    p Update a new Book into our inventory id= #{id} is the id
+div.mt-2
+    form(action='/postUpdateProduct' method='post')
+        .form-group
+            input.form-control(type='hidden' name='productId' value= id)
+        .form-group
+            label(for='titleId') Title
+            input.form-control(type='text' aria-describedby='emailHelp' id='titleId' name='title' value= product.title )
+        .form-group
+            label(for='authorId') Author
+            input.form-control(type='text' aria-describedby='emailHelp' id='authorId' name='author' value= product.author)
+        .form-group
+            label(for='priceId') Price
+            input.form-control(type='text' aria-describedby='emailHelp' id='priceId' name='price' value= product.price)
+        button.btn.btn-primary(type='submit') Submit

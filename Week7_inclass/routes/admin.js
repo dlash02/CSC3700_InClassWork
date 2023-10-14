@@ -14,7 +14,8 @@ router.get( '/add-product', adminController.getAddProduct );
 router.post( '/product', adminController.postAddProduct);
 router.get( '/showAdmin', adminController.getProducts);
 router.get( '/deleteItem/:id', adminController.deleteProduct);
-// router.get( '/editItem/:id', adminController.editProduct);
+router.get( '/editItem/:id', adminController.editProduct);
+router.post( '/postUpdateProduct', adminController.postUpdateProduct);
 
 // router.post(  '/product', (req, res, next) => {
 //     // console.log( req );

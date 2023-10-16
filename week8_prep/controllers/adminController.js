@@ -23,26 +23,19 @@ exports.postAddProduct = ( req, res, next) => {
 }
 exports.getProducts = ( req, res, next ) => {
     Product.fetchAll()
-        .then ((rows, fieldData) =>{
-            console.log("ROWS=>");
-            console.log( rows );
-            // res.send("It must works")
+        .then(( rows, fieldData ) => {
+            console.log( "ROws="); console.log( rows );
+            // res.send( "Is seems ok ");
             res.render( 'admin/showProductsAdmin', {
-                        title: "Show Available Products",
-                        from: 'showProducts',
-                        products : rows[0]
-                    });
-        }).catch( err => {
-           console.log( "DB Error=>");
-           console.log( err );
+                title: "Show Products Available (DB)",
+                from: 'showProducts',
+                products: rows[0]
+            })
         })
-}
+ }
 exports.deleteProduct = ( req, res, next ) => {
-    let id = req.params.id;
-    Product.delete(id);
-    console.log(`id:${id}`);
-    // res.send("Happy day it is gone! id:" +id);
-    res.redirect('/showAdmin');
+    // Left off here ... need to code delete.
+    // It is coded in modles.
 }
 exports.editProduct = ( req, res, next ) => {
     let id = req.params.id;

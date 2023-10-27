@@ -25,4 +25,8 @@ module.exports = class Product {
         return db.execute( "select * from products where id = ?",
             [id] );
     }
+    // update ( id ){
+    //     return db.execute( "UPDATE products SET price = ?, author = ?, title= ?  WHERE id = ?",
+    //         [this.price, this.author, this.title, id ] );
+    // }
 }

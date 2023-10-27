@@ -25,7 +25,7 @@ exports.getProducts = ( req, res, next ) => {
             res.render( 'admin/showProductsAdmin', {
                 title: "Show Products Available (DB)",
                 from: 'showProducts',
-                products: rows[0]
+                products: rows[0][0]
             })
         })
  }

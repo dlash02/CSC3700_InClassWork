@@ -1,8 +1,8 @@
 import './App.css';
 import Navs from "./Navs";
 import {Col, Row} from "react-bootstrap";
-import Home from "./Home";
-import Books from "./Books";
+import Home2 from "./Home2";
+// import Books from "./Books";
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
         <Row>
             <Col sm={2}> Hey </Col>
             <Col sm={8}>
-                <Home/>
+                <Home2/>
             </Col>
             <Col sm={2}> Hey </Col>
         </Row>

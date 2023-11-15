@@ -2,7 +2,9 @@ import React from 'react';
 
 function Create(props) {
     return (
-        <div></div>
+        <div>
+            <h2> Add A New Book </h2>
+        </div>
     );
 }
 

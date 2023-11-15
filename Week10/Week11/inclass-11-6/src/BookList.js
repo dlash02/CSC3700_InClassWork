@@ -23,7 +23,6 @@ function BookList({books, title, handleDelete}) {
                         <td> {book.author}</td>
                         <td> {book.price}</td>
                         <td>
-                            <Button onClick={() => handleDelete(book.id)}> Delete {book.id} </Button>
                         </td>
                     </tr>
                 ))}

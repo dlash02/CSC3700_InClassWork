@@ -4,19 +4,24 @@
       "id": 1,
       "title": "The Fellowship of the Ring",
       "author": "J. R. Tolkien",
-      "price": 12.99
+      "price": 12.99,
+      "description" : "The first book if this great trilogy"
     },
     {
       "id": 2,
       "title": "Dune",
       "author": "F. Herbert",
-      "price": 14.99
+      "price": 14.99,
+      "description" : "Perhaps the greatest sci fi book ever. The first of 6"
+
     },
     {
       "id": 3,
       "title": "I Robot",
       "author": "I. Asimov",
-      "price": 14.99
+      "price": 14.99,
+      "description" : "Has 3 laws of robotics and a movie by Will Smith!"
+
     }
   ]
 }

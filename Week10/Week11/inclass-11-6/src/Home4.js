@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 // import Books from "./Books";
 import {Button} from "bootstrap-react";
 import {Col, Row, Table} from "react-bootstrap";
@@ -6,17 +6,30 @@ import BookList from "./BookList";
 
 function Home4(props) {
     const myTitle = "My Book List"
-    const [ books, setBooks ] = useState(
-        [
-            {id:1, title: "The Hobbit There and back again", author: "J.R.Tolkien", price: 14.99},
-            {id:2, title: "Dune", author: "F. Herbert", price: 13.99},
-            {id:3, title: "I Robot", author: "I. Asimov", price: 14.99}
-        ]
-    )
-    const handleDelete = (id) => {
-        const newBooks = books.filter( b => b.id !== id )
-        setBooks(newBooks);
-    }
+
+    const [ books, setBooks ] = useState( null );
+    const[ isPending, setIsPending ] = useState( true);
+    const[ error, setError ] = useState( null );
+    useEffect( () => {
+        let url ="http://localhost:8000/books";
+        setTimeout( () => {
+            fetch ( url )
+                .then( resp => {
+                    if ( !resp.ok ){
+                        throw Error( "Cannot fetch URL for data resource");
+                    }
+                    return resp.json()
+                }).then( data => {
+                    setIsPending( false)
+                    setBooks( data );
+                    setError( null );
+            }).catch( ( err ) => {
+                console.log( "Error->");
+                console.log( err.message );
+                setError( err.message );
+            })
+        }, 2000)
+    }, []);
     return (
         <div>
             <Row>
@@ -29,7 +42,9 @@ function Home4(props) {
                     Books over there
                 </Col>
                 <Col >
-                   <BookList  books={books} title={myTitle} handleDelete={handleDelete}/>
+                    { error && <div> Error: {error} </div> }
+                    { isPending && <div> Loading ... </div> }
+                    { books && <BookList  books={books} title={myTitle} /> }
                 </Col>
             </Row>
         </div>

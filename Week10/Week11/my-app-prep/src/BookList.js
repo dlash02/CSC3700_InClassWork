@@ -1,5 +1,6 @@
 import {Table} from "react-bootstrap";
 import {Button} from "bootstrap-react";
+import {Link} from "react-router-dom";
 
 // function BookList ( props ) {
 function BookList ( {books, title, handleDelete}  ) {
@@ -25,7 +26,7 @@ function BookList ( {books, title, handleDelete}  ) {
                         <td> {book.author}</td>
                         <td> {book.price}</td>
                         <td>
-                           <Button onClick={() => handleDelete(book.id)} > Delete {book.id}</Button>
+                            <Link to={`/books/${book.id}`}> Show {book.id}</Link>
                         </td>
                     </tr>
                 )

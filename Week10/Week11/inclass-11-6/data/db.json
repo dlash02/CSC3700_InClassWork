@@ -4,25 +4,22 @@
       "id": 1,
       "title": "The Hobbit There and back again",
       "author": "J.R.Tolkien",
-      "price": 14.99
+      "price": 14.99,
+      "description" : "The first book"
     },
     {
       "id": 2,
       "title": "Dune",
       "author": "F. Herbert",
-      "price": 13.99
+      "price": 13.99,
+      "description" : "The first book"
     },
     {
       "id": 3,
       "title": "I Robot",
       "author": "I. Asimov",
-      "price": 14.99
-    },
-    {
-      "id": 4,
-      "title": "I Robot part II",
-      "author": "I. Asimov",
-      "price": 14.99
+      "price": 14.99,
+      "description": "Standalone book"
     }
   ]
 }

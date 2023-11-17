@@ -1,12 +1,22 @@
 import React from 'react';
-import {Link, useParams} from "react-router-dom";
+import {Link, useHistory, useParams} from "react-router-dom";
 import useFetch from "./useFetch";
 import {Table} from "react-bootstrap";
+import {Button} from "bootstrap-react";
 
 function BookDetails(props) {
     const {id} = useParams();
     let url = `http://localhost:8000/books/${id}` ;
     const {data : book, error, isPending} = useFetch( url );
+    const history = useHistory();
+    const handleClick = () => {
+        let URL = `http://localhost:8000/books/${book.id}`;
+        fetch(URL , {
+            method: 'DELETE',
+        }).then(() => {
+            history.push('/');
+        })
+    }
     return (
         <div>
              { isPending  && <div> Loading </div>}
@@ -30,6 +40,7 @@ function BookDetails(props) {
                              <td> {book.author}</td>
                              <td> {book.price}</td>
                              <td> {book.description}</td>
+                             <td> <Button onClick={handleClick}> Delete {book.id}  </Button></td>
                          </tr>
                          </tbody>
                      </Table>

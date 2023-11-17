@@ -4,6 +4,7 @@ import Books from "./Books";
 import { BrowserRouter as Router, Route, Switch} from  'react-router-dom';
 import Create from "./Create";
 import BookDetails from "./BookDetails";
+import NotFound from "./NotFound";
 
 
 function App() {
@@ -20,6 +21,9 @@ function App() {
                   </Route>
                   <Route path="/books/:id">
                       <BookDetails/>
+                  </Route>
+                  <Route path='*'>
+                      <NotFound/>
                   </Route>
               </Switch>
           </Router>

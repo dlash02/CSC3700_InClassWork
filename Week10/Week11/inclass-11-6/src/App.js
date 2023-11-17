@@ -4,6 +4,7 @@ import {Col, Row} from "react-bootstrap";
 import Home5 from "./Home5";
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Create from "./Create";
+import BookDetails from "./BookDetails";
 
 // import Books from "./Books";
 
@@ -21,6 +22,9 @@ function App() {
                           </Route>
                           <Route path='/create'>
                               <Create />
+                          </Route>
+                          <Route path='/books/:id'>
+                              <BookDetails />
                           </Route>
                       </Switch>
                   </Col>

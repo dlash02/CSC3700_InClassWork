@@ -7,7 +7,7 @@ import useFetch from "./useFetch";
 function Books () {
     let url = " http://localhost:8000/books";
     const {data : books, isPending, error} = useFetch( url )
-    const myTitle = "Books 4 u 4 Sale (useFetch)!"
+    const myTitle = "Books 4 u 4 Sale V2"
     const myTitle14 = " Books at 14.99"
     return (
         <Row>

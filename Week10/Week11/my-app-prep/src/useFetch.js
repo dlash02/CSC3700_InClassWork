@@ -10,7 +10,7 @@ const useFetch = ( url ) => {
         // let url = " http://localhost:8000/books";
         console.log("URL->" + url );
         const abortContr = new AbortController();
-        setTimeout( () => {
+        // setTimeout( () => {
             fetch( url, { signal : abortContr.signal })
                 .then(resp => {
                     // console.log( `resp->`); console.log( resp );
@@ -21,13 +21,15 @@ const useFetch = ( url ) => {
                 }).
             then(data => {
                 setIsPending( false );
+                console.log( "data=>")
                 console.log( data );
                 // setBooks( data );
                 setData( data );
                 setError ( null );
             }).catch( (err) => {
                 if ( err.name == 'AbortError'){
-                    console.log( "Fetch Aborted")
+                    console.log( "Fetch Aborted->")
+                    console.log( err.message );
                 } else {
                     console.log("Error:");
                     console.log(err.message);
@@ -35,7 +37,7 @@ const useFetch = ( url ) => {
                     setError(err.message);
                 }
             })
-        }, 1000)
+        // }, 10)
         return () => {
             console.log( "Clean up");
             // Want to stop the fetch

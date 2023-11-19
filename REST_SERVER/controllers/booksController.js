@@ -11,6 +11,7 @@ exports.getBooks = ( req, res, next ) => {
 
         })
  }
+
 exports.getBookDetails = ( req, res, next ) => {
     let id = req.params.id;
     // fetch all the records and find the idth one

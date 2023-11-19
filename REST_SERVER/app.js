@@ -2,6 +2,11 @@ const express = require("express");
 const app = express();
 const db = require("./util/database");
 const booksRoutes = require("./routes/books");
+const bodyParser = require("body-parser");
+app.use( bodyParser.json()); // for JSON input data
+    // / create application/x-www-form-urlencoded parser
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
+
 // The * opens up for all domains ... BUT could CSV specify allowed domains
 //               e.g., localhostL3000, localhost:3001
 app.use( (req, res, next ) => {
@@ -14,13 +19,13 @@ app.use( (req, res, next ) => {
 });
 app.use( booksRoutes.routes);
 
-const bodyParser = require("body-parser");
+
 const path = require("path");
 const http = require("http");
 
 // app.use( bodyParser.urlencoded({extended: false})); // middleware for body
 
-app.use( bodyParser.json()); // for JSON input data
+
 
 
 

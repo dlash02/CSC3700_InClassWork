@@ -5,12 +5,12 @@ module.exports = class Book {
         this.title = t;
         this.author = a;
         this.price = price;
-        // this.description = "It was good it was bad it was ugly";
+        this.description = "It was good it was bad it was ugly";
     }
     save() {
-            return db.execute( 'insert into books (title, price, author) ' +
-                'values (?, ?, ?)',
-                [this.title, this.price, this.author ]
+            return db.execute( 'insert into books (title, price, author, description) ' +
+                'values (?, ?, ?, ?)',
+                [this.title, this.price, this.author, this.description]
             )
     }
     static delete( id ) {

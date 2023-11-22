@@ -5,6 +5,8 @@ import { BrowserRouter as Router, Route, Switch} from  'react-router-dom';
 import Create from "./Create";
 import BookDetails from "./BookDetails";
 import NotFound from "./NotFound";
+import BookDetailsWUpdate from "./BookDetailsWUpdate";
+import BookUpdateV2 from "./BookUpdateV2";
 
 
 function App() {
@@ -20,7 +22,10 @@ function App() {
                       <Create/>
                   </Route>
                   <Route path="/books/:id">
-                      <BookDetails/>
+                      <BookDetailsWUpdate/>
+                  </Route>
+                  <Route path="/BookUpdate/:id">
+                      <BookUpdateV2/>
                   </Route>
                   <Route path='*'>
                       <NotFound/>

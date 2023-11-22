@@ -24,11 +24,6 @@ const path = require("path");
 const http = require("http");
 
 // app.use( bodyParser.urlencoded({extended: false})); // middleware for body
-
-
-
-
-
 let port = 8000;
 const server = http.createServer(app);
 server.listen( port );

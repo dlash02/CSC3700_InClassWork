@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import Form from 'react-bootstrap/Form';
-import {Button} from "bootstrap-react";
+import {Button} from "react-bootstrap";
 // import { useNavigate } from 'react-router-dom';
 import { useHistory } from "react-router-dom";
 
@@ -75,8 +75,8 @@ function Create(props) {
             </Form.Group>
                 {!isPending && <Button variant="primary" type="submit">Submit</Button>}
                 {isPending && <Button disabled variant="primary" type="submit">Adding  Content </Button>}
-                {isPending ? <Button variant="primary" type="submit">Submit</Button>
-                          : <Button disabled variant="primary" type="submit">Adding  Content </Button>}
+                {/*{isPending ? <Button variant="primary" type="submit">Submit</Button>*/}
+                {/*          : <Button disabled variant="primary" type="submit">Adding  Content </Button>}*/}
 
             </Form>
             <ol>

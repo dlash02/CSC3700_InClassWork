@@ -1,0 +1,48 @@
+{
+  "books": [
+    {
+      "id": 3,
+      "name": "name",
+      "title": "I Robot Part 1",
+      "price": 14.99,
+      "description": "Has 3 laws of robotics and a movie by Will Smith!",
+      "author": "I. Asimov"
+    },
+    {
+      "id": 4,
+      "title": "I Robot Part 2",
+      "author": "I. Asimov",
+      "price": 14.99,
+      "description": "Wasnt' suppose to be a sequel but ... robotics and a movie by Will Smith!"
+    },
+    {
+      "description": "comeYour comments here",
+      "price": "11.99",
+      "author": "bake",
+      "title": "aple",
+      "id": 8
+    },
+    {
+      "id": 9,
+      "name": "name",
+      "title": "Dune Messiah",
+      "price": "11.99",
+      "description": "The second of the great Dune series!",
+      "author": "F. Herbert (again)"
+    },
+    {
+      "description": "Blah blah",
+      "price": "11.99",
+      "author": "Asimov",
+      "title": "2000 leagues under the sea",
+      "id": 11
+    },
+    {
+      "description": "He made this book first",
+      "price": "11.99",
+      "author": "J. R. Tolkien",
+      "title": "The Hobbit: There and Back Again",
+      "id": 12
+    }
+  ]
+}

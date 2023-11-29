@@ -15,6 +15,8 @@ function BookDetails(props) {
             method: 'DELETE',
         }).then(() => {
             history.push('/');
+        }).catch( e => {
+            console.log( 'delete error'); console.log( e );
         })
     }
     const handleClickUpdate = () => {

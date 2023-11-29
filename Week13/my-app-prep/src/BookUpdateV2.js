@@ -11,10 +11,10 @@ function BookUpdateV2(props) {
     const [ isPending, setIsPending] = useState(true);
     const [values, setValues] = useState( {
         id: id,
-        name: 'name',
+        name: '',
         title: '',
-        price: '10.99',
-        description: 'dd'
+        price: '',
+        description: ''
     })
     useEffect( () => {
         // let url = " http://localhost:8000/books";
@@ -60,10 +60,10 @@ function BookUpdateV2(props) {
     };
     //---
     // setBooks( data );
-    const [title, setTitle] = useState(values.title);
-    const [author, setAuthor] = useState(values.author);
-    const [price, setPrice] = useState(values.price);
-    const [description, setDescription] = useState(values.description);
+    // const [title, setTitle] = useState(values.title);
+    // const [author, setAuthor] = useState(values.author);
+    // const [price, setPrice] = useState(values.price);
+    // const [description, setDescription] = useState(values.description);
     // const navigate = useNavigate();
     const history = useHistory();
     const handleSubmit = (e) => {

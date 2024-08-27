@@ -1,0 +1,112 @@
+#logo {
+    height: 100px;
+    margin-left: 40px;
+    position: fixed;
+    top: 20px;
+    left: -10px;
+}
+body {
+    height: 20%;
+    /*background-image: url('https://codetheweb.blog/assets/img/posts/style-a-navigation-bar-css/background.jpg');
+    background-size: cover;*/
+    font-family: sans-serif;
+    /*margin-top: 80px;
+    padding: 30px; */
+}
+main {
+    color: black;
+    font-size: 20px;
+    position: relative;
+    left: 200px;
+}
+table, td, th {
+    border: 1px solid brown;
+    border-collapse: collapse;
+}
+header {
+    border: 2px solid black;
+    /* display: flex; */
+    display: flex;
+}
+banner {
+    postition: fixed;
+    height: 120px;
+    background-color: cornflowerblue;
+    top: 1px;
+    width: 100%;
+}
+td {
+    padding-left: 10px;
+    padding-right: 5px;
+}
+nav ul {
+    position: relative;
+    top: -50px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    /* display: inline; */
+    display: flex;
+    margin-left: 70%;
+}
+nav li {
+    /* float: right; */
+    margin-left: 0px;
+    margin-right: 5px;
+    border: solid 1px;
+    background-color: cyan;
+    width: 145px;
+    margin-top: 20px;
+    font-size: 20px;
+    padding: 10px;
+}
+
+#title {
+    color: blueviolet;
+    font-size: 32px;
+    font-weight: bold;
+    position: relative;
+    top: 30px;
+    left: 25%
+}
+nav a:hover, a:active {
+    background-color: green;
+}
+nav a:visited {
+    background-color: red;
+
+}
+@media screen and ( max-width: 1200px ) {
+    #title {
+        font-size: 15px;
+        color: blueviolet;
+        padding-right: 15%;
+    }
+    nav {
+       display:flex;
+    }
+    nav ul {
+        position: relative;
+        top: 0px;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        margin-left: 50%;
+    }
+    nav li {
+        /* float: right; */
+        margin-left: 0px;
+        margin-right: 5px;
+        border: none;
+        background-color: darkseagreen;
+        margin-top: 5px;
+        font-size: 12px;
+        width: 100px;
+        padding: 0px;
+
+    }
+    a {
+        display: inline-block;
+        padding: 5px;
+    }
+}

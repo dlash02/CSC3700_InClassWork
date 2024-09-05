@@ -45,4 +45,8 @@ footer {
 #footerContent {
     padding-left: 20px;
 }
+.firstCol {
+    background-color: yellow;
+    font-size: 30px;
+}
 

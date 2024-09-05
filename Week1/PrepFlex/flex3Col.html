@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    html {
+      font-size:20px;
+    }
+
+    .flex-container {
+      display: flex;
+      flex-direction: row;
+      font-size: 30px;
+      text-align: center;
+      gap: 20px;
+    }
+    .flex-item-left {
+      background-color: #f1f1f1;
+      padding: 10px;
+      flex: 30%;
+    }
+    .flex-item-middle {
+      background-color: dodgerblue;
+      padding: 10px;
+      flex: 30%;
+    }
+    .flex-item-right {
+      background-color: dodgerblue;
+      padding: 10px;
+      flex: 30%;
+    }
+    img {
+      width: 200px;
+      padding-bottom: 5px;
+      float: left;
+      padding-right: 5px;
+      padding-top: 10px;
+    }
+    .colTitle {
+      background-color: #81A594;
+      font-size: 2.5rem;
+    }
+    #title {
+      font-size: 3rem;
+      font-family: Calibri;
+    }
+    header{
+      background-color: #81A594;
+      height: 200px;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+    }
+    #logo {
+      width: 150px;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+    .cText {
+      padding-top: 10px;
+    }
+    #mainHeader {
+      display: flex;
+      text-align: start;
+      align-items: center;
+      background-color: yellow;
+      height: 100px;
+      margin-bottom: 5px;
+      margin-top: 5px;
+    }
+    #mainContent {
+      font-size: 2.5rem;
+      position: relative;
+      left: 25%;
+    }
+    /* Responsive layout - makes a one column-layout instead of two-column layout */
+    @media (max-width: 1000px) {
+      .flex-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+<header >
+  <img id='logo' src="imgs/logo.png" alt="The Logo "/>
+  <h2 id="title"> Cartoons 4 U </h2>
+</header>
+<main>
+  <div id="mainHeader">
+    <div id="mainContent"> Cartoon Favorites </div>
+  </div>
+<div class="flex-container">
+  <div class="flex-item-left">
+    <div class="colTitle">
+      Calvin and Hobbes
+    </div>
+    <img id='calvinImg' src="imgs/calvinSnow2.PNG"  />
+    <div class="cText">Calvin and Hobbes, American newspaper comic strip that ran from 1985 to 1995,
+    chronicling the high jinks of Calvin, a six-year-old boy, and his pet tiger, Hobbes.
+    Calvin and Hobbes was renowned for its vivid portrayal of a child’s imagination.
+      </div>
+  </div>
+  <div class="flex-item-middle">
+    <div class="colTitle">FarSide</div>
+    <img id='farImg' src="imgs/farSide.png"  />
+    <div class="cText">
+    The Far Side is a single-panel comic created by Gary Larson and
+    syndicated by Chronicle Features and then Universal Press Syndicate,
+    which ran from December 31, 1979, to January 1, 1995 (when Larson retired as a cartoonist).
+      </div>
+  </div>
+  <div class="flex-item-right">
+    <div class="colTitle">Dilbert</div>
+    <img id='dilbertImg' src="imgs/dilbert.PNG"  />
+    <div class="cText">
+    Dilbert is an American comic strip written and illustrated by Scott Adams,
+    first published on April 16, 1989.[2] It is known for its satirical office humor about a
+    white-collar, micromanaged office with engineer Dilbert as the title character.
+    It has spawned dozens of books, an animated television series,
+    a video game, and hundreds of themed merchandise items.
+      </div>
+  </div>
+</div>
+</main>
+</body>
+</html>

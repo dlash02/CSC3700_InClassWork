@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    div {
+      border: solid 1px black;
+      padding: 5px;
+    }
+
+    div:before {
+      content: "Added BEFORE anything within the div!";
+      color:red;
+    }
+
+    div:after {
+      content: "Added AFTER anything within the div!";
+      color:green;
+    }
+  </style>
+</head>
+<body>
+<div>Div 1</div>
+<div>Div 2</div>
+<div>Div 3</div>
+<div>Div 4</div>
+</body>
+</html>

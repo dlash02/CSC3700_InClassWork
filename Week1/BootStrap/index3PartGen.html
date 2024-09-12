@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Title</title>
+    <link rel='stylesheet' href="css/fullGenMain.css">
+    <style>
+        #special {
+            background-color:yellow;
+        }
+        td {
+            background-color: yellowgreen;
+        }
+    </style>
+    <script>
+        items = {
+            1 : {
+                cost: 12.99,
+                title:"American Prometheus",
+                author: "Bird and Sherwin",
+                description: "Oppenheimer, WW2,  and Atomic Bomb"
+            },
+            2 : {
+                cost: 10.99,
+                title:"Educated",
+                author: "Tara Westover",
+                description: "Growing up in Rural Utah and authors escape"
+            },
+            3 : {
+                cost: 11.99,
+                title:"The Fellowship of the Ring",
+                author: "J.R. Tolkien",
+                description: "The first book of the LOTR trilogy"
+            }
+        }
+        let total = 0;
+        function countClick( id ){
+            alert(`id:${id}`)
+            let theItem = items[id];
+            total += theItem.cost;
+            console.log( theItem );
+            document.getElementById('results').innerHTML = `$${total}`;
+        }
+    </script>
+</head>
+
+<body>
+<header>
+    <img id="logo" src="imgs/logo.png"/>
+    <h1 class="mainTitle"> Books 4 u </h1>
+</header>
+<article>
+    <h1 id="title">
+        Here is our current store of books
+    </h1>
+    <main >
+     <table id='bookTable'  >
+    <thead>
+      <tr> <th> Title</th> <th> Author</th><th> Description</th></tr>
+    </thead>
+    <tbody>
+    <tr> <td id="special"> <a href="prometheus.html"> American Prometheus </a> </td><td> Bird and Sherwin </td><td> The Story of Oppenheimer </td>
+       <td> <button onClick="countClick(1)"> Add Oppenheimer </button></td></tr>
+    <tr> <td style="background-color: plum"> Educated </td><td> Westover </td><td> A life Journey away from a strange family </td>
+        <td>  <button onClick="countClick(2)"> Add Educated </button></td></td></tr>
+    <tr> <td> The Fellowship of the Ring </td><td> Tolkien</td><td> The FIrst book of the mighty Trilogy </td>
+        <td> <button onClick="countClick(3)"> Add LOTR </button></td>
+    </tr>
+    </tbody>
+</table>
+    </main>
+</article>
+<footer>
+   &copy; 2023 - Built for <a href="http://www.aurora.edu"> Aurora University </a>
+    <span style='position: relative; left: 10px' id="results"> 00 </span>
+</footer>
+
+</body>
+</html>

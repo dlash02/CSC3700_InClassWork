@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Title</title>
+    <link rel='stylesheet' href="css/fullGenMain.css">
+    <style>
+        #special {
+            background-color:yellow;
+        }
+        td {
+            background-color: yellowgreen;
+        }
+    </style>
+    <script>
+        items = [
+            {
+                id: 1,
+                cost: 12.99,
+                link: 'prometheus.html',
+                title: "American Prometheus",
+                author: "Bird and Sherwin",
+                description: "Oppenheimer, WW2,  and Atomic Bomb"
+            },
+            {
+                id : 2,
+                cost: 10.99,
+                link: 'educated.html',
+                title:"Educated",
+                author: "Tara Westover",
+                description: "Growing up in Rural Utah and authors escape"
+            },
+            {
+                id : 3,
+                cost: 11.99,
+                link: 'lotr.html',
+                title:"The Fellowship of the Ring",
+                author: "J.R. Tolkien",
+                description: "The first book of the LOTR trilogy"
+            }
+        ]
+        let total = 0;
+        function countClick( id ){
+            alert(`id:${id}`)
+            let theItem = items[id];
+            total += theItem.cost;
+            console.log( theItem );
+            document.getElementById('results').innerHTML = `$${total}`;
+        }
+        function showTable(){
+            let res = '';
+            for( let i=0; i<items.length; i++ ){
+                let r = items[i];
+                let row = `<tr><td> <a href='${r.link}'> ${r.title} </a> </td><td> ${r.author} </td><td> ${r.description}</td>`;
+                let id = r.id;
+                row += `<td> <button onClick="countClick(${id})"> Add Item </button>  </td>`
+                res += row;
+            }
+            document.getElementById('mainTable').innerHTML = res;
+
+        }
+    </script>
+</head>
+
+<body onLoad="showTable()">
+<header>
+    <img id="logo" src="imgs/logo.png"/>
+    <h1 class="mainTitle"> Books 4 u </h1>
+</header>
+<article>
+    <h1 id="title">
+        Here is our current store of books
+    </h1>
+    <main >
+     <table id='bookTable'  >
+    <thead>
+      <tr> <th> Title</th> <th> Author</th><th> Description</th></tr>
+    </thead>
+    <tbody id="mainTable">
+
+    </tr>
+    </tbody>
+</table>
+    </main>
+</article>
+<footer>
+   &copy; 2023 - Built for <a href="http://www.aurora.edu"> Aurora University </a>
+    <span style='position: relative; left: 10px' id="results"> 00 </span>
+</footer>
+
+</body>
+</html>

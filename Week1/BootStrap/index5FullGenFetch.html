@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Title</title>
+    <link rel='stylesheet' href="css/fullGenMain.css">
+    <style>
+        #special {
+            background-color:yellow;
+        }
+        td {
+            background-color: yellowgreen;
+        }
+    </style>
+    <script>
+        let total = 0;
+        function countClick( id ){
+            let url = "http://45.55.136.114/~dlash/CSC3700/books.php"
+            fetch( url )
+                .then(response => response.json())
+                .then(items => {
+                    let theItem = items[id];
+                    total += parseInt(theItem.cost);
+                    console.log(theItem);
+                    document.getElementById('results').innerHTML = `$${total}`;
+                });
+        }
+        function showTable(){
+            let url = "http://45.55.136.114/~dlash/CSC3700/books.php"
+            fetch( url )
+                .then(response => response.json())
+                .then(items =>{
+                    let res = '';
+                    for( let i=0; i<items.length; i++ ){
+                        let r = items[i];
+                        let row = `<tr><td> <a href='${r.link}'> ${r.title} </a> </td><td> ${r.author} </td><td> ${r.description}</td>`;
+                        let id = r.id;
+                        row += `<td> <button onClick="countClick(${id})"> Add Item </button>  </td>`
+                        res += row;
+                    }
+                    document.getElementById('mainTable').innerHTML = res
+            })
+                .catch(error => console.error(error))
+
+        }
+    </script>
+</head>
+
+<body onLoad="showTable()">
+<header>
+    <img id="logo" src="imgs/logo.png"/>
+    <h1 class="mainTitle"> Books 4 u </h1>
+</header>
+<article>
+    <h1 id="title">
+        Here is our current store of books
+    </h1>
+    <main >
+     <table id='bookTable'  >
+    <thead>
+      <tr> <th> Title</th> <th> Author</th><th> Description</th></tr>
+    </thead>
+    <tbody id="mainTable">
+
+    </tr>
+    </tbody>
+</table>
+    </main>
+</article>
+<footer>
+   &copy; 2023 - Built for <a href="http://www.aurora.edu"> Aurora University </a>
+    <span style='position: relative; left: 10px' id="results"> 00 </span>
+</footer>
+
+</body>
+</html>

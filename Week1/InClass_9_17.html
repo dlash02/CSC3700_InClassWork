@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+      const person = {
+          name: "Jill",
+          age: 20,
+          gpa: 3.99,
+          major: "History",
+          showInfo() {
+            console.log( `name:${this.name}`)
+          }
+
+      }
+      function doSomeStuff( userN, userAge, doMobile ){
+        person.showInfo();
+        person.age = 122;
+        let{ name, age} = person; // descronstruct name and age out of person
+        alert( `theage:${age}`);
+        alert( `userName:${userN}`);
+        // Desconstruct out of an array
+        const teams = [ "hawks", 'bears', "sox", 'cubs', 33];
+        const [ team1,,team3] = teams;
+        return (
+                `Name: ${userN}` +
+                `Age: ${userAge}`
+        )
+c
+      }
+      const doSumStuff2 = ( userN, userAge, doMobile ) => {
+        alert( `userName2:${userN}`);
+      }
+      function starter1 () {
+        let res = doSomeStuff("Jack", 12, false);
+        let res2 = add( 5, 5 );
+        let res4 = add3;
+      }
+      const add = (a, b) => a+b
+      const add2 = a  => a+6
+      const add3 = () => 2+4;
+
+    </script>
+</head>
+<body onLoad="doSomeStuff( 'Jack', 22, true)">
+  <h2> Hello There </h2>
+</body>
+</html>

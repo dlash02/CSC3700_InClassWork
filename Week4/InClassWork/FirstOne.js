@@ -12,9 +12,9 @@ const server = http.createServer((req, res) => {
     let url = req.url;
     if ( url === "/") {
         res.setHeader('Content-Type', 'text/html; charset=utf-8');
-        let str = " <html> <body> <h2> Hello World</h2></body>";
+        let str = " <html> <body> <h2> Hello Worldm !!!</h2></body>";
         res.write(str);
-        res.write("<p style='color:red'> Welcome home!</p>")
+        res.write("<p style='color:red'> Welcome Home Again!!!!</p>")
         res.write("</body></html>");
         res.end();
     } else if ( url === "/about" ) {
@@ -24,7 +24,6 @@ const server = http.createServer((req, res) => {
         res.end();
     }
 });
-
-const PORT = 3000;
+const PORT = 3001;
 console.log( `listening on ${PORT}`);
 server.listen(PORT);

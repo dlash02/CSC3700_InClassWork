@@ -1,0 +1,20 @@
+{
+  "name": "924_node",
+  "version": "1.0.0",
+  "main": "appRoutes.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "node appRoutes.js",
+    "start-server" : "node appRoutes.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  },
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}

@@ -33,6 +33,6 @@ app.use( '/', ( req, res, next ) => {
 })
 
 const server = http.createServer(app);
-const port = 3002;
+const port = 3003;
 server.listen(port );
 console.log(`Listening on port ${port}`);

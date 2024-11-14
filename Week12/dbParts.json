@@ -1,0 +1,5 @@
+{
+  "parts": [ { "partNumber": "ABC123", "partName": "Widget",
+    "partCount": 25, "partCost": 4.99 },
+    { "partNumber": "XYZ456", "partName": "Gadget", "partCount": 12, "partCost": 9.75 }
+  ] }

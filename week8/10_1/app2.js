@@ -35,4 +35,4 @@ app.use( '/', ( req, res, next ) => {
 const server = http.createServer(app);
 const port = 3010;
 server.listen(port );
-console.log(`Listening on port ${port}`);
+console.log(`Listening on port http://localhost:${port}`);

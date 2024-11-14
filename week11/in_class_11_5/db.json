@@ -1,0 +1,73 @@
+{
+  "books": [
+    {
+      "id": "1",
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "price" : 12.99,
+      "year": 1960
+    },
+    {
+      "id": "2",
+      "title": "1984",
+      "author": "George Orwell",
+      "year": 1949
+    },
+    {
+      "id": "4",
+      "title": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "year": 1951
+    },
+    {
+      "id": "5",
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "description" : "I read this in high school",
+      "year": 1813
+    },
+    {
+      "id": "6",
+      "title": "The Lord of the Rings",
+      "author": "J.R.R. Tolkien",
+      "year": 1954
+    },
+    {
+      "id": "7",
+      "title": "Moby Dick",
+      "author": "Herman Melville",
+      "year": 1851
+    },
+    {
+      "id": "8",
+      "title": "War and Peace",
+      "author": "Leo Tolstoy",
+      "year": 1869
+    },
+    {
+      "id": "9",
+      "title": "The Odyssey",
+      "author": "Homer",
+      "year": -800
+    },
+    {
+      "id": "10",
+      "title": "Crime and Punishment",
+      "author": "Fyodor Dostoevsky",
+      "year": 1866
+    },
+    {
+      "id": "20",
+      "title": "The Fellowship of the Ring",
+      "author": "J. R. Tolkien",
+      "year": 1965
+    },
+    {
+      "id": "120",
+      "title": "Cat In The Hat is Back",
+      "author": "Dr Suess",
+      "price" : 15.99,
+      "year": 1967
+    }
+  ]
+}

@@ -10,25 +10,44 @@ exports.getAddProducts = (req, res) => {
         activeAdmin : true
     });
 };
-exports.postAddProducts = (req, res) => {
+exports.postAddProducts = (req, res, next) => {
     // const obj = { 'title' : req.body.title,
     //     'author' : req.body.author,
     //     'description' : req.body.description,
     // };
     // products.push( obj );
-    let product = new Product( req.body.title,req.body.author,
-                                req.body.description);
+    let product = new Product(req.body.title, req.body.author,
+        req.body.description);
     product.save();
-    let products = Product.fetchAll();
-    let gotProducts = false;
-    if ( products.length > 0){
-        gotProducts = true;
-    }
-    res.render('productResults', {
-        pageTitle: 'Here are the available products',
-        products: products,
-        gotProducts: gotProducts,
-        activeAdmin : true
-
-    });
+    // let products = Product.fetchAll();
+    // console.log(products);
+    // let gotProducts = false;
+    // if (products.length > 0) {
+    //     gotProducts = true;
+    // }
+    res.redirect("/shop")
 }
+    // res.render('productResults', {
+    //     pageTitle: 'Here are the available products',
+    //     products: products,
+    //     gotProducts: gotProducts,
+    //     activeAdmin : true
+    // });
+    // Adding getProducts
+    exports.getProducts = (req, res,next ) => {
+        // res.sendFile(path.join( rootDir, 'views', 'shop.html'));
+        //const products = adminData.products;
+        const products = Product.fetchAll(products => {
+            console.log("Looging products" );
+            console.log( products);
+            let gotProducts = false;
+            if ( products.length)
+                 gotProducts = true;
+            res.render('productResults', {
+                products: products,
+                gotProducts: gotProducts,
+                pageTitle: "Shop My Site",
+                from: "shop"});
+        });
+    }
+``
